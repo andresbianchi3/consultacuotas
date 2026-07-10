@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Maestro de Consulta de Cuotas</title>
+    <!-- Google Fonts para tipografía profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons mediante CDN para componentes visuales -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-soft: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #52606d;
+            --bg-page: #f4f7fb;
+            --bg-card: #ffffff;
+            --border: #d6dce5;
+            --success: #10b981;
+            --success-soft: #d1fae5;
+            --danger: #ef4444;
+            --danger-soft: #fef2f2;
+            --radius: 18px;
+            --radius-sm: 12px;
+            --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+            --transition: 220ms ease;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 32%),
+                        var(--bg-page);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .container {
+            width: min(100%, 980px);
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .hero-card,
+        .panel,
+        .table-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card {
+            padding: 1.3rem 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-top {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hero-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 18px;
+            background: #ffffff;
+            padding: 0.6rem;
+            border: 1px solid rgba(37, 99, 235, 0.18);
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .hero-title {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .hero-title i {
+            color: var(--primary);
+            background: rgba(37, 99, 235, 0.1);
+            padding: 0.55rem;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+        }
+
+        .hero-copy {
+            color: var(--text-muted);
+            max-width: 540px;
+            line-height: 1.55;
+            margin-top: 0.35rem;
+            font-size: 0.95rem;
+        }
+
+        .hero-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.15), transparent);
+            margin: 1rem 0 1.1rem;
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.8rem;
+            align-items: stretch;
+        }
+
+        .search-input {
+            width: 100%;
+            min-height: 52px;
+            padding: 0 1.2rem 0 3.4rem;
+            border-radius: 14px;
+            border: 1px solid rgba(37, 99, 235, 0.16);
+            background: #f8fafc;
+            font-size: 1rem;
+            color: var(--text-main);
+            outline: none;
+            transition: border var(--transition), box-shadow var(--transition), background var(--transition);
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            border-color: rgba(37, 99, 235, 0.35);
+            background: #ffffff;
+        }
+
+        .btn-search {
+            border: none;
+            border-radius: 14px;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+            min-width: 140px;
+            min-height: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12);
+        }
+
+        .btn-search:hover {
+            transform: translateY(-1px);
+            background: #1d4ed8;
+            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.16);
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.75rem;
+            align-items: stretch;
+        }
+
+        .search-input {
+            width: 100%;
+            min-height: 50px;
+            padding: 0 1.1rem 0 3.3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: #f8fafc;
+            font-size: 0.98rem;
+            color: var(--text-main);
+            outline: none;
+            transition: border var(--transition), box-shadow var(--transition);
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+            border-color: var(--primary);
+            background: #ffffff;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .btn-search {
+            border: none;
+            border-radius: 14px;
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: transform var(--transition), background var(--transition);
+            min-width: 130px;
+        }
+
+        .btn-search:hover {
+            transform: translateY(-1px);
+            background: #1d4ed8;
+        }
+
+        .error-card {
+            display: none;
+            gap: 0.8rem;
+            padding: 1rem 1rem 1rem 1.2rem;
+            margin: 1.25rem 0;
+            border-radius: 14px;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+            background: var(--danger-soft);
+            font-weight: 600;
+        }
+
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.1rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .panel {
+            padding: 1.2rem 1.1rem;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.95rem;
+        }
+
+        .panel-header h2 {
+            margin: 0;
+            font-size: 0.98rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .panel-header h2 i {
+            color: var(--primary);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.8rem;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            display: grid;
+            row-gap: 0.25rem;
+        }
+
+        .info-card span {
+            display: block;
+        }
+
+        .info-card .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .info-card .value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .metric-box {
+            padding: 0.9rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: #f8fafc;
+            min-height: 84px;
+            transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+        }
+
+        .metric-box.metric-highlight {
+            border-color: rgba(37, 99, 235, 0.25);
+            background: #eff6ff;
+        }
+
+        .metric-box.metric-highlight.debt {
+            border-color: rgba(239, 68, 68, 0.35);
+            background: linear-gradient(135deg, rgba(254, 226, 226, 0.85), rgba(254, 242, 242, 0.95));
+            color: #991b1b;
+            box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.12), 0 18px 30px rgba(239, 68, 68, 0.08);
+        }
+
+        .metric-box.metric-highlight.debt .metric-value {
+            color: #b91c1c;
+        }
+
+        .metric-title {
+            display: block;
+            margin-bottom: 0.45rem;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 700;
+        }
+
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .table-card {
+            padding: 1.25rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 560px;
+        }
+
+        thead {
+            background: #f8fafc;
+        }
+
+        th,
+        td {
+            padding: 0.8rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        th {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 700;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.45rem 0.75rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .status-pill.paid {
+            color: #047857;
+            background: #d1fae5;
+        }
+
+        .status-pill.pending {
+            color: #a11b1b;
+            background: #fee2e2;
+            box-shadow: inset 0 0 0 1px rgba(161, 27, 27, 0.08);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.45rem 0.75rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform var(--transition), background var(--transition), color var(--transition);
+        }
+
+        .status-pill.clean {
+            color: #047857;
+            background: #d1fae5;
+        }
+
+        .status-pill.debt {
+            color: #991b1b;
+            background: #fee2e2;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.08);
+        }
+
+        .participation-note {
+            margin-top: 1rem;
+            padding: 1rem 1rem;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .participation-note.debt {
+            color: #991b1b;
+            background: #fff1f1;
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        .participation-note.clear {
+            color: #065f46;
+            background: #ecfdf5;
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .cell-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+        }
+
+        .cell-status.paid {
+            color: #065f46;
+            background: #d1fae5;
+        }
+
+        .cell-status.pending {
+            color: #991b1b;
+            background: #fee2e2;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .row-debt {
+            background: rgba(254, 226, 226, 0.5);
+        }
+
+        .row-debt td {
+            border-color: rgba(239, 68, 68, 0.18);
+        }
+
+        .row-paid {
+            background: rgba(209, 250, 229, 0.35);
+        }
+
+        .row-paid td {
+            border-color: rgba(16, 185, 129, 0.16);
+        }
+
+        .cell-status.pending strong {
+            color: #b91c1c;
+        }
+
+        .table-card {
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 860px) {
+            .dashboard-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1rem 0.85rem 2.5rem;
+            }
+
+            .hero-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .hero-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+
+            .search-input {
+                padding-left: 3.5rem;
+            }
+
+            .btn-search {
+                width: 100%;
+                min-width: 0;
+            }
+
+            th,
+            td {
+                padding: 0.85rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- PANTALLA PRINCIPAL: HEADER Y BUSCADOR -->
+        <header class="search-card">
+            <div class="hero-card">
+                <div class="hero-top">
+                    <div class="hero-brand">
+                        <img src="flor-de-lis-del-pepe---transparente.png" alt="Scouts logo" class="hero-logo" />
+                        <div>
+                            <h1 class="hero-title"><i class="bi bi-search"></i> Consulta de cuotas</h1>
+                            <p class="hero-copy">Ingresa el DNI y presiona Consultar para ver el estado de deuda y pagos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-divider" aria-hidden="true"></div>
+
+                <div class="search-form">
+                    <div class="search-wrapper">
+                        <i class="bi bi-person-vcard search-icon"></i>
+                        <input 
+                            type="text"
+                            id="dniInput"
+                            class="search-input"
+                            placeholder="DNI del afiliado"
+                            autocomplete="off"
+                            maxlength="12"
+                        />
+                    </div>
+                    <button type="button" id="btnConsultar" class="btn-search">
+                        <i class="bi bi-search"></i> Consultar
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- PANTALLA PRINCIPAL: NOTIFICACIÓN ROJA ERROR -->
+        <div id="errorCard" class="error-card">
+            <i class="bi bi-x-octagon-fill" style="font-size: 1.25rem;"></i>
+            <span>No se encontró ningún afiliado con ese DNI.</span>
+        </div>
+
+        <!-- PANTALLA DE RESULTADOS: DASHBOARD -->
+        <main class="dashboard-layout" id="dashboardLayout">
+            
+            <!-- Bloque Lateral Izquierdo: Información Base -->
+            <section class="panel">
+                <div class="panel-header">
+                    <h2><i class="bi bi-person-lines-fill"></i> Ficha del Afiliado</h2>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <span class="label">Nombre</span>
+                        <span class="value" id="lblNombre">-</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">DNI</span>
+                        <span class="value" id="lblDni">-</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">Ingreso</span>
+                        <span class="value" id="lblIngreso">-</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="label">Cuota mensual</span>
+                        <span class="value" id="lblCuotaBase">-</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-header">
+                    <h2><i class="bi bi-pie-chart-fill"></i> Resumen</h2>
+                    <span id="badgeEstado" class="status-pill"></span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <span class="metric-title">Total Cuotas</span>
+                        <span class="metric-value" id="metTotal">0</span>
+                    </div>
+                    <div class="metric-box metric-highlight">
+                        <span class="metric-title">Pagadas</span>
+                        <span class="metric-value" id="metPagas">0</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-title">Pendientes</span>
+                        <span class="metric-value" id="metPendientes">0</span>
+                    </div>
+                    <div class="metric-box metric-highlight debt" id="boxTotalAdeudado">
+                        <span class="metric-title">Total adeudado</span>
+                        <span class="metric-value" id="metDeuda">$0</span>
+                    </div>
+                </div>
+                <div id="participationNotice" class="participation-note clear" style="display: none;">
+                    <strong>Salida 11/07 al Campgn San Martín:</strong> el afiliado puede participar si no registra deuda.
+                </div>
+            </section>
+        </main>
+
+        <!-- SECCIÓN INFERIOR: TABLA DE HISTORIAL CRONOLÓGICO -->
+        <section class="table-card" id="tableCard">
+            <div class="panel-header">
+                <h2><i class="bi bi-clock-history"></i> Historial de cuotas</h2>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Importe</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaHistorialBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
