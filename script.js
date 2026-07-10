@@ -2,9 +2,8 @@
 // 1. CONFIGURACIÓN Y BASE DE DATOS REAL
 // ==========================================
 
-// Valor base de la cuota
-const CUOTA_MENSUAL = 26000;
-const CUOTA_PENDIENTE = 28000;
+// Valores base posibles de la cuota según hermanos/beneficio
+const CUOTA_BASE_DEFAULT = 28000;
 
 // Base de datos de afiliados (Generada desde tus archivos Excel/CSV)
 const afiliados = {
@@ -173,6 +172,23 @@ function parseImporteJson(valor) {
     return parseFloat(numeric) || 0;
 }
 
+function determinarCuotaBase(registroJson) {
+    if (!registroJson) return CUOTA_BASE_DEFAULT;
+
+    const pagos = ['Abril', 'Mayo', 'Junio', 'Julio']
+        .map(mes => parseImporteJson(registroJson[mes]))
+        .filter(valor => valor > 0);
+
+    if (pagos.length === 0) {
+        return CUOTA_BASE_DEFAULT;
+    }
+
+    const mayorPago = Math.max(...pagos);
+    if (mayorPago === 21000) return 21000;
+    if (mayorPago === 23000) return 23000;
+    return CUOTA_BASE_DEFAULT;
+}
+
 function calcularCuotas(afiliado) {
     const periodosFijos = [
         { codigoPeriodo: '2026-04', mesTexto: 'Abril 2026', key: 'Abril' },
@@ -182,15 +198,16 @@ function calcularCuotas(afiliado) {
     ];
 
     const registroJson = afiliado.cuotasAbrJulio;
+    const cuotaBase = determinarCuotaBase(registroJson);
     const listadoCuotas = [];
 
     periodosFijos.forEach(periodo => {
         const importePagado = registroJson
             ? parseImporteJson(registroJson[periodo.key])
             : 0;
-        const importeAdeudado = Math.max(0, CUOTA_PENDIENTE - importePagado);
+        const importeAdeudado = Math.max(0, cuotaBase - importePagado);
         const estaPagado = importeAdeudado === 0;
-        const importePagadoVisual = estaPagado ? CUOTA_MENSUAL : importePagado;
+        const importePagadoVisual = estaPagado ? cuotaBase : importePagado;
 
         listadoCuotas.push({
             codigoPeriodo: periodo.codigoPeriodo,
@@ -203,6 +220,7 @@ function calcularCuotas(afiliado) {
         });
     });
 
+    afiliado.cuotaBase = cuotaBase;
     return listadoCuotas;
 }
 
@@ -215,7 +233,7 @@ function mostrarResumen(afiliado, listadoCuotas) {
     document.getElementById('lblNombre').textContent = afiliado.nombre;
     document.getElementById('lblDni').textContent = afiliado.dni;
     document.getElementById('lblIngreso').textContent = formatearFechaARG(afiliado.ingreso);
-    document.getElementById('lblCuotaBase').textContent = formatearPesos(CUOTA_MENSUAL);
+    document.getElementById('lblCuotaBase').textContent = formatearPesos(afiliado.cuotaBase || CUOTA_BASE_DEFAULT);
 
     document.getElementById('metTotal').textContent = totalCuotas;
     document.getElementById('metPagas').textContent = cuotasPagas;
