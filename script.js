@@ -84,7 +84,7 @@ const afiliados = {
     "56538935": { "nombre": "HIDALGO, Benicio", "dni": "56538935", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
     "56976679": { "nombre": "JORNET LAVAYEN, Bautista", "dni": "56976679", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
     "56061055": { "nombre": "LUDUEÑA FASSI, Aldana", "dni": "56061055", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "99000009": { "nombre": "MALDONA MIRANDEI Alexander", "dni": "99000009", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
+    "99000009": { "nombre": "MALDONA MIRANDEI Alexander", "dni": "57152569", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
     "56761267": { "nombre": "NAVARRETE, Alba", "dni": "56761267", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
     "57527420": { "nombre": "RECHE, Isabella", "dni": "57527420", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06", "2024-07", "2024-08"] },
     "56535352": { "nombre": "SCARFO, Nazareno", "dni": "56535352", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06", "2024-07"] },
