@@ -7,89 +7,89 @@ const CUOTA_BASE_DEFAULT = 28000;
 
 // Base de datos de afiliados (Generada desde tus archivos Excel/CSV)
 const afiliados = {
-    "46657886": { "nombre": "Basualdo, Lautaro", "dni": "46657886", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "46973053": { "nombre": "Bussoli, Maitena", "dni": "46973053", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "46222783": { "nombre": "Contreras, Alma Martina", "dni": "46222783", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "99000000": { "nombre": "CONTRERAS, Morena", "dni": "99000000", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "46885541": { "nombre": "Fisogni, Esteban Alejandro", "dni": "46885541", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04"] },
-    "46032812": { "nombre": "GUZMAN, Facundo", "dni": "46032812", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "47174886": { "nombre": "Lazarte Castro, Micaela Agostina", "dni": "47174886", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "47662249": { "nombre": "Lunati, Sabrina Natalí", "dni": "47662249", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "46588508": { "nombre": "Mansilla, Gonzalo Ezequiel", "dni": "46588508", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "47001643": { "nombre": "Mansilla, Valentina Abril", "dni": "47001643", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "47273550": { "nombre": "Nuñez, Bárbara", "dni": "47273550", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06"] },
-    "99000001": { "nombre": "OLMEDO, Ivalu", "dni": "99000001", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "99000002": { "nombre": "Peirano, Lautaro", "dni": "99000002", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "99000003": { "nombre": "Pereyra, Hernán", "dni": "99000003", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "46973109": { "nombre": "Romero, Gonzalo  Agustín", "dni": "46973109", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "47175030": { "nombre": "Torreblanca, Lara Natalí", "dni": "47175030", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04"] },
-    "46845188": { "nombre": "Uncal Meyer, Lautaro", "dni": "46845188", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "46506832": { "nombre": "Urtiaga, Abril", "dni": "46506832", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "45934634": { "nombre": "Urtiaga, Tomás", "dni": "45934634", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "48070608": { "nombre": "VALDIVIEZO BERNARDI, Emma", "dni": "48070608", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "47174851": { "nombre": "Vidal, Vittorio Máximo", "dni": "47174851", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "50938303": { "nombre": "ANTONELLO, Lara", "dni": "50938303", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "51276925": { "nombre": "BRUNO, Camilo", "dni": "51276925", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "49998113": { "nombre": "FLORES CEBOLLADA, Juliana Milena", "dni": "49998113", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "52158358": { "nombre": "GOMEZ PELLIZA, Malena", "dni": "52158358", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "48534049": { "nombre": "GUIÑAZÚ, Patricio Joaquin", "dni": "48534049", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "50629267": { "nombre": "GUZMAN, Joaquin", "dni": "50629267", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "51196628": { "nombre": "KORIAKOS, Jeremias", "dni": "51196628", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "50082001": { "nombre": "LEIVA Nayeli Luana", "dni": "50082001", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "50719356": { "nombre": "LESCANO, Natanael", "dni": "50719356", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "48722583": { "nombre": "MALICHO, Santino Tomas", "dni": "48722583", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06"] },
-    "52156281": { "nombre": "QUAGLIA, Marino", "dni": "52156281", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06", "2024-07"] },
-    "99000004": { "nombre": "RODRIGUEZ, Nawel", "dni": "99000004", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "52158860": { "nombre": "SCALTRITTI, Bianca", "dni": "52158860", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04"] },
-    "50631328": { "nombre": "SEGURA Genaro", "dni": "50631328", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04"] },
-    "50222330": { "nombre": "URTIAGA, Francisco gaspar", "dni": "50222330", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "99000005": { "nombre": "ZURCHSMITTEN, Santiago", "dni": "99000005", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06", "2024-07"] },
-    "55007783": { "nombre": "ARGUELLO, Luisana", "dni": "55007783", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "53077829": { "nombre": "Arguello, Ramiro Benjamín", "dni": "53077829", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "52867806": { "nombre": "BORDA, Aurora", "dni": "52867806", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "54475873": { "nombre": "BRANE IRAZBAL, Catalina", "dni": "54475873", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04"] },
-    "99000006": { "nombre": "CORDOBA, Guillermina", "dni": "99000006", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "52464435": { "nombre": "CORREA Alma", "dni": "52464435", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "55289982": { "nombre": "DE LA O'PRADOZ MARTOS, Joaquin", "dni": "55289982", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "52867860": { "nombre": "FLEITA, Pilar", "dni": "52867860", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06"] },
-    "55599595": { "nombre": "GUIÑAZU, Malena", "dni": "55599595", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "55290487": { "nombre": "HAUMAN LEIVA, Lisandro Hazziel", "dni": "55290487", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06"] },
-    "54759543": { "nombre": "HEREDIA, Ambar", "dni": "54759543", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "54019229": { "nombre": "KORIAKOS, Taiana", "dni": "54019229", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "54308719": { "nombre": "LUDUEÑA, Malena", "dni": "54308719", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "99000007": { "nombre": "MONITTO, Tobias", "dni": "99000007", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "55006627": { "nombre": "MORETTO, Leon", "dni": "55006627", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
-    "53507865": { "nombre": "PARASKEVOPULOS, Agustin", "dni": "53507865", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "53076137": { "nombre": "Peinado, Octavio Valentín", "dni": "53076137", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "52466914": { "nombre": "Pereyra, Sofía", "dni": "52466914", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "54472614": { "nombre": "PEREYRA, Victoria", "dni": "54472614", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "52896130": { "nombre": "SEQUEIRA, Lionel", "dni": "52896130", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "52866822": { "nombre": "Urtiaga, Joaquín", "dni": "52866822", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "52866821": { "nombre": "Urtiaga, Juan", "dni": "52866821", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04"] },
-    "53265870": { "nombre": "Urtiaga, Pedro Valentin", "dni": "53265870", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "54761028": { "nombre": "Valdiviezo Berardi, Noah", "dni": "54761028", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "53263881": { "nombre": "Valdiviezo Bernardi, Liz", "dni": "53263881", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "53731909": { "nombre": "Vitale Masso, Martina", "dni": "53731909", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "56764563": { "nombre": "ALFONSO, Bianca", "dni": "56764563", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "55836993": { "nombre": "CORDOBA, Martina", "dni": "55836993", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "55523457": { "nombre": "CORREA Matheo", "dni": "55523457", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "57349836": { "nombre": "DIAZ GUZMAN, Jeremias", "dni": "57349836", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "57569042": { "nombre": "DVORKIN, Julian", "dni": "57569042", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "56305998": { "nombre": "DVORKIN, Zoe", "dni": "56305998", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "99000008": { "nombre": "GOMEZ, Francesca", "dni": "99000008", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "56978763": { "nombre": "GUERRICO, Pedro", "dni": "56978763", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
-    "55790635": { "nombre": "GUIGNARD, Lucia", "dni": "55790635", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "56537469": { "nombre": "HAUMAN LEIVA, Regino", "dni": "56537469", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06", "2024-07"] },
-    "56059756": { "nombre": "HEREDIA, India", "dni": "56059756", "ingreso": "2024-04-01", "cuotasPagas": [] },
-    "56538935": { "nombre": "HIDALGO, Benicio", "dni": "56538935", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
-    "56976679": { "nombre": "JORNET LAVAYEN, Bautista", "dni": "56976679", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "56061055": { "nombre": "LUDUEÑA FASSI, Aldana", "dni": "56061055", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06"] },
-    "99000009": { "nombre": "MALDONA MIRANDEI Alexander", "dni": "57152569", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05"] },
-    "56761267": { "nombre": "NAVARRETE, Alba", "dni": "56761267", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "57527420": { "nombre": "RECHE, Isabella", "dni": "57527420", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06", "2024-07", "2024-08"] },
-    "56535352": { "nombre": "SCARFO, Nazareno", "dni": "56535352", "ingreso": "2024-04-01", "cuotasPagas": ["2024-05", "2024-06", "2024-07"] },
-    "55125830": { "nombre": "URTIAGA, Julian", "dni": "55125830", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05"] },
-    "56763170": { "nombre": "VAIRA, Genaro", "dni": "56763170", "ingreso": "2024-04-01", "cuotasPagas": ["2024-04", "2024-05", "2024-06", "2024-07"] }
+    "46657886": { "nombre": "Basualdo, Lautaro", "dni": "46657886", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "46973053": { "nombre": "Bussoli, Maitena", "dni": "46973053", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "46222783": { "nombre": "Contreras, Alma Martina", "dni": "46222783", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "99000000": { "nombre": "CONTRERAS, Morena", "dni": "99000000", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "46885541": { "nombre": "Fisogni, Esteban Alejandro", "dni": "46885541", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04"] },
+    "46032812": { "nombre": "GUZMAN, Facundo", "dni": "46032812", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "47174886": { "nombre": "Lazarte Castro, Micaela Agostina", "dni": "47174886", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "47662249": { "nombre": "Lunati, Sabrina Natalí", "dni": "47662249", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "46588508": { "nombre": "Mansilla, Gonzalo Ezequiel", "dni": "46588508", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "47001643": { "nombre": "Mansilla, Valentina Abril", "dni": "47001643", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "47273550": { "nombre": "Nuñez, Bárbara", "dni": "47273550", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06"] },
+    "99000001": { "nombre": "OLMEDO, Ivalu", "dni": "99000001", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "99000002": { "nombre": "Peirano, Lautaro", "dni": "99000002", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "99000003": { "nombre": "Pereyra, Hernán", "dni": "99000003", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "46973109": { "nombre": "Romero, Gonzalo  Agustín", "dni": "46973109", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "47175030": { "nombre": "Torreblanca, Lara Natalí", "dni": "47175030", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04"] },
+    "46845188": { "nombre": "Uncal Meyer, Lautaro", "dni": "46845188", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "46506832": { "nombre": "Urtiaga, Abril", "dni": "46506832", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "45934634": { "nombre": "Urtiaga, Tomás", "dni": "45934634", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "48070608": { "nombre": "VALDIVIEZO BERNARDI, Emma", "dni": "48070608", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "47174851": { "nombre": "Vidal, Vittorio Máximo", "dni": "47174851", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "50938303": { "nombre": "ANTONELLO, Lara", "dni": "50938303", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "51276925": { "nombre": "BRUNO, Camilo", "dni": "51276925", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "49998113": { "nombre": "FLORES CEBOLLADA, Juliana Milena", "dni": "49998113", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "52158358": { "nombre": "GOMEZ PELLIZA, Malena", "dni": "52158358", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "48534049": { "nombre": "GUIÑAZÚ, Patricio Joaquin", "dni": "48534049", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "50629267": { "nombre": "GUZMAN, Joaquin", "dni": "50629267", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "51196628": { "nombre": "KORIAKOS, Jeremias", "dni": "51196628", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "50082001": { "nombre": "LEIVA Nayeli Luana", "dni": "50082001", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "50719356": { "nombre": "LESCANO, Natanael", "dni": "50719356", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "48722583": { "nombre": "MALICHO, Santino Tomas", "dni": "48722583", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06"] },
+    "52156281": { "nombre": "QUAGLIA, Marino", "dni": "52156281", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06", "2026-07"] },
+    "99000004": { "nombre": "RODRIGUEZ, Nawel", "dni": "99000004", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "52158860": { "nombre": "SCALTRITTI, Bianca", "dni": "52158860", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04"] },
+    "50631328": { "nombre": "SEGURA Genaro", "dni": "50631328", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04"] },
+    "50222330": { "nombre": "URTIAGA, Francisco gaspar", "dni": "50222330", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "99000005": { "nombre": "ZURCHSMITTEN, Santiago", "dni": "99000005", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06", "2026-07"] },
+    "55007783": { "nombre": "ARGUELLO, Luisana", "dni": "55007783", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "53077829": { "nombre": "Arguello, Ramiro Benjamín", "dni": "53077829", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "52867806": { "nombre": "BORDA, Aurora", "dni": "52867806", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "54475873": { "nombre": "BRANE IRAZBAL, Catalina", "dni": "54475873", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04"] },
+    "99000006": { "nombre": "CORDOBA, Guillermina", "dni": "99000006", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "52464435": { "nombre": "CORREA Alma", "dni": "52464435", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "55289982": { "nombre": "DE LA O'PRADOZ MARTOS, Joaquin", "dni": "55289982", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "52867860": { "nombre": "FLEITA, Pilar", "dni": "52867860", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06"] },
+    "55599595": { "nombre": "GUIÑAZU, Malena", "dni": "55599595", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "55290487": { "nombre": "HAUMAN LEIVA, Lisandro Hazziel", "dni": "55290487", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06"] },
+    "54759543": { "nombre": "HEREDIA, Ambar", "dni": "54759543", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "54019229": { "nombre": "KORIAKOS, Taiana", "dni": "54019229", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "54308719": { "nombre": "LUDUEÑA, Malena", "dni": "54308719", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "99000007": { "nombre": "MONITTO, Tobias", "dni": "99000007", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "55006627": { "nombre": "MORETTO, Leon", "dni": "55006627", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05"] },
+    "53507865": { "nombre": "PARASKEVOPULOS, Agustin", "dni": "53507865", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "53076137": { "nombre": "Peinado, Octavio Valentín", "dni": "53076137", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "52466914": { "nombre": "Pereyra, Sofía", "dni": "52466914", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "54472614": { "nombre": "PEREYRA, Victoria", "dni": "54472614", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "52896130": { "nombre": "SEQUEIRA, Lionel", "dni": "52896130", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "52866822": { "nombre": "Urtiaga, Joaquín", "dni": "52866822", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "52866821": { "nombre": "Urtiaga, Juan", "dni": "52866821", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04"] },
+    "53265870": { "nombre": "Urtiaga, Pedro Valentin", "dni": "53265870", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "54761028": { "nombre": "Valdiviezo Berardi, Noah", "dni": "54761028", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "53263881": { "nombre": "Valdiviezo Bernardi, Liz", "dni": "53263881", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "53731909": { "nombre": "Vitale Masso, Martina", "dni": "53731909", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "56764563": { "nombre": "ALFONSO, Bianca", "dni": "56764563", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "55836993": { "nombre": "CORDOBA, Martina", "dni": "55836993", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "55523457": { "nombre": "CORREA Matheo", "dni": "55523457", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "57349836": { "nombre": "DIAZ GUZMAN, Jeremias", "dni": "57349836", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "57569042": { "nombre": "DVORKIN, Julian", "dni": "57569042", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "56305998": { "nombre": "DVORKIN, Zoe", "dni": "56305998", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "99000008": { "nombre": "GOMEZ, Francesca", "dni": "99000008", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "56978763": { "nombre": "GUERRICO, Pedro", "dni": "56978763", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05"] },
+    "55790635": { "nombre": "GUIGNARD, Lucia", "dni": "55790635", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "56537469": { "nombre": "HAUMAN LEIVA, Regino", "dni": "56537469", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06", "2026-07"] },
+    "56059756": { "nombre": "HEREDIA, India", "dni": "56059756", "ingreso": "2026-04-01", "cuotasPagas": [] },
+    "56538935": { "nombre": "HIDALGO, Benicio", "dni": "56538935", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05"] },
+    "56976679": { "nombre": "JORNET LAVAYEN, Bautista", "dni": "56976679", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "56061055": { "nombre": "LUDUEÑA FASSI, Aldana", "dni": "56061055", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06"] },
+    "99000009": { "nombre": "MALDONADO Alexander", "dni": "57152569", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05"] },
+    "56761267": { "nombre": "NAVARRETE, Alba", "dni": "56761267", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "57527420": { "nombre": "RECHE, Isabella", "dni": "57527420", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06", "2026-07", "2026-08"] },
+    "56535352": { "nombre": "SCARFO, Nazareno", "dni": "56535352", "ingreso": "2026-04-01", "cuotasPagas": ["2026-05", "2026-06", "2026-07"] },
+    "55125830": { "nombre": "URTIAGA, Julian", "dni": "55125830", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05"] },
+    "56763170": { "nombre": "VAIRA, Genaro", "dni": "56763170", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06", "2026-07"] }
 };
 
 // ==========================================
@@ -119,7 +119,35 @@ function normalizarNombre(nombre) {
         .toUpperCase()
         .normalize('NFD')
         .replace(/\p{Diacritic}/gu, '')
+        .replace(/[^A-Z0-9\s]/g, '')
         .replace(/\s+/g, ' ');
+}
+
+function buscarRegistroPorNombre(nombreAfiliado) {
+    const nombreNormalizado = normalizarNombre(nombreAfiliado);
+    const tokensAfiliado = nombreNormalizado.split(' ');
+    const apellidoAfiliado = tokensAfiliado[0] || '';
+    const nombrePropioAfiliado = tokensAfiliado[tokensAfiliado.length - 1] || '';
+
+    for (const item of cuotasAbrJulioData) {
+        const nombreJson = normalizarNombre(item.Nombre);
+        if (nombreJson === nombreNormalizado) return item;
+    }
+
+    for (const item of cuotasAbrJulioData) {
+        const nombreJson = normalizarNombre(item.Nombre);
+        const tokensJson = nombreJson.split(' ');
+        const nombrePropioJson = tokensJson[tokensJson.length - 1] || '';
+        const apellidoJson = tokensJson[0] || '';
+
+        if (nombrePropioJson !== nombrePropioAfiliado) continue;
+        if (apellidoJson === apellidoAfiliado) return item;
+        if (apellidoJson.startsWith(apellidoAfiliado.slice(0, 6)) || apellidoAfiliado.startsWith(apellidoJson.slice(0, 6))) {
+            return item;
+        }
+    }
+
+    return null;
 }
 
 async function cargarCuotasJson() {
@@ -158,10 +186,19 @@ function manejarConsulta() {
 }
 
 function buscarAfiliado(dni) {
-    const afiliado = afiliados[dni] ? { ...afiliados[dni] } : null;
+    let afiliado = afiliados[dni] ? { ...afiliados[dni] } : null;
+    if (!afiliado) {
+        const clave = Object.keys(afiliados).find(key => afiliados[key].dni === dni);
+        if (clave) {
+            afiliado = { ...afiliados[clave] };
+        }
+    }
     if (!afiliado) return null;
 
-    const registroJson = cuotasPorNombre.get(normalizarNombre(afiliado.nombre));
+    let registroJson = cuotasPorNombre.get(normalizarNombre(afiliado.nombre));
+    if (!registroJson) {
+        registroJson = buscarRegistroPorNombre(afiliado.nombre);
+    }
     afiliado.cuotasAbrJulio = registroJson || null;
     return afiliado;
 }
@@ -201,13 +238,19 @@ function calcularCuotas(afiliado) {
     const cuotaBase = determinarCuotaBase(registroJson);
     const listadoCuotas = [];
 
-    periodosFijos.forEach(periodo => {
+    const pagos = periodosFijos.map(periodo =>
+        registroJson ? parseImporteJson(registroJson[periodo.key]) : 0
+    );
+    const primerPagoIndex = pagos.findIndex(valor => valor > 0);
+
+    periodosFijos.forEach((periodo, index) => {
         const importePagado = registroJson
             ? parseImporteJson(registroJson[periodo.key])
             : 0;
-        const importeAdeudado = Math.max(0, cuotaBase - importePagado);
-        const estaPagado = importeAdeudado === 0;
-        const importePagadoVisual = estaPagado ? cuotaBase : importePagado;
+        const esMesAnteriorAlIngreso = importePagado === 0 && primerPagoIndex !== -1 && index < primerPagoIndex;
+        const importeAdeudado = esMesAnteriorAlIngreso ? 0 : Math.max(0, cuotaBase - importePagado);
+        const estaPagado = !esMesAnteriorAlIngreso && importePagado > 0 && importeAdeudado === 0;
+        const importePagadoVisual = esMesAnteriorAlIngreso ? 0 : estaPagado ? cuotaBase : importePagado;
 
         listadoCuotas.push({
             codigoPeriodo: periodo.codigoPeriodo,
@@ -216,7 +259,8 @@ function calcularCuotas(afiliado) {
             importePagadoVisual,
             importeAdeudado,
             pagado: estaPagado,
-            pagoParcial: importePagado > 0 && !estaPagado
+            pagoParcial: !esMesAnteriorAlIngreso && importePagado > 0 && !estaPagado,
+            noAplica: esMesAnteriorAlIngreso
         });
     });
 
@@ -288,7 +332,9 @@ function generarHistorial(listadoCuotas) {
         fila.appendChild(cellMes);
 
         const cellImporte = document.createElement('td');
-        if (cuota.pagado) {
+        if (cuota.noAplica) {
+            cellImporte.textContent = '-';
+        } else if (cuota.pagado) {
             cellImporte.textContent = formatearPesos(cuota.importePagadoVisual);
         } else if (cuota.pagoParcial) {
             cellImporte.textContent = `${formatearPesos(cuota.importePagado)} pagado / ${formatearPesos(cuota.importeAdeudado)} falta`;
@@ -300,7 +346,10 @@ function generarHistorial(listadoCuotas) {
         const cellEstado = document.createElement('td');
         const spanEstado = document.createElement('span');
 
-        if (cuota.pagado) {
+        if (cuota.noAplica) {
+            spanEstado.className = "cell-status clear";
+            spanEstado.innerHTML = `- No aplica`;
+        } else if (cuota.pagado) {
             spanEstado.className = "cell-status paid";
             spanEstado.innerHTML = `✔ Pagado`;
         } else if (cuota.pagoParcial) {
