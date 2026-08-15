@@ -5,7 +5,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "CORDOBA, Martina",
@@ -13,7 +14,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "CORREA Matheo",
@@ -21,7 +23,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "DIAZ GUZMAN, Jeremias",
@@ -29,7 +32,8 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 23,000.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "DVORKIN, Julian",
@@ -37,7 +41,8 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 23,000.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "DVORKIN, Zoe",
@@ -45,7 +50,8 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 23,000.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GOMEZ, Francesca",
@@ -53,7 +59,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GUERRICO, Pedro",
@@ -61,7 +68,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GUIGNARD, Lucia",
@@ -69,7 +77,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "HAUMAN LEIVA, Regino",
@@ -77,7 +86,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 21,000.00",
         "Julio": "$ 3,000.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "HEREDIA, India",
@@ -85,7 +95,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "HIDALGO, Benicio",
@@ -93,7 +104,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "JORNET LAVAYEN, Bautista",
@@ -101,7 +113,8 @@
         "Mayo": "$ 4,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "LUDUEÑA FASSI, Aldana",
@@ -109,7 +122,8 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 20,900.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "MALDONADO Alexander",
@@ -117,7 +131,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "NAVARRETE, Alba",
@@ -125,6 +140,7 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
+        "Agosto": "$ 28,000.00",
         "Rama": "MANADA"
     },
     {
@@ -133,6 +149,7 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 28,000.00",
+        "Agosto": "$ 28,000.00",
         "Rama": "MANADA"
     },
     {
@@ -141,7 +158,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 14,000.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "URTIAGA, Julian",
@@ -149,7 +167,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "VAIRA, Genaro",
@@ -157,7 +176,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 28,000.00",
-        "Rama": "MANADA"
+        "Rama": "MANADA",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "ARGUELLO, Luisana",
@@ -165,7 +185,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Arguello, Ramiro Benjamín",
@@ -173,7 +194,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "BORDA, Aurora",
@@ -181,7 +203,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "BRANE IRAZBAL, Catalina",
@@ -189,7 +212,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "CORDOBA, Guillermina",
@@ -197,7 +221,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "CORREA Alma",
@@ -205,7 +230,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "DE LA O'PRADOZ MARTOS, Joaquin",
@@ -213,6 +239,25 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
+        "Agosto": "$ 28,000.00",
+        "Rama": "UNIDAD"
+    },
+    {
+        "Nombre": "GALVAN, Bianca",
+        "Abril": "$ 0.00",
+        "Mayo": "$ 0.00",
+        "Junio": "$ 0.00",
+        "Julio": "$ 0.00",
+        "Agosto": "$ 28,000.00",
+        "Rama": "UNIDAD"
+    },
+    {
+        "Nombre": "TISSERA Nicole",
+        "Abril": "$ 0.00",
+        "Mayo": "$ 0.00",
+        "Junio": "$ 0.00",
+        "Julio": "$ 0.00",
+        "Agosto": "$ 28,000.00",
         "Rama": "UNIDAD"
     },
     {
@@ -221,7 +266,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GUIÑAZU, Malena",
@@ -229,7 +275,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "HAUMAN LEIVA, Lisandro Hazziel",
@@ -237,7 +284,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 21,000.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "HEREDIA, Ambar",
@@ -245,7 +293,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "KORIAKOS, Taiana",
@@ -253,7 +302,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "LUDUEÑA, Malena",
@@ -261,7 +311,8 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 20,900.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "MONITTO, Tobias",
@@ -269,7 +320,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "MORETTO, Leon",
@@ -277,7 +329,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "PARASKEVOPULOS, Agustin",
@@ -285,7 +338,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Peinado, Octavio Valentín",
@@ -293,7 +347,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Pereyra, Sofía",
@@ -301,7 +356,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "PEREYRA, Victoria",
@@ -309,7 +365,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "SEQUEIRA, Lionel",
@@ -317,7 +374,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Urtiaga, Joaquín",
@@ -325,7 +383,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Urtiaga, Juan",
@@ -333,7 +392,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Urtiaga, Pedro Valentin",
@@ -341,7 +401,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Valdiviezo Berardi, Noah",
@@ -349,7 +410,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 21,000.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Valdiviezo Bernardi, Liz",
@@ -357,7 +419,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 21,000.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Vitale Masso, Martina",
@@ -365,7 +428,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "UNIDAD"
+        "Rama": "UNIDAD",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "ANTONELLO, Lara",
@@ -373,7 +437,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "BRUNO, Camilo",
@@ -381,7 +446,8 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 17,000.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "FLORES CEBOLLADA, Juliana Milena",
@@ -389,7 +455,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 45,500.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GOMEZ PELLIZA, Malena",
@@ -397,7 +464,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GUIÑAZÚ, Patricio Joaquin",
@@ -405,7 +473,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "GUZMAN, Joaquin",
@@ -413,7 +482,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "KORIAKOS, Jeremias",
@@ -421,7 +491,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "LEIVA Nayeli Luana",
@@ -429,7 +500,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 21,000.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "LESCANO, Natanael",
@@ -437,7 +509,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "MALICHO, Santino Tomas",
@@ -445,7 +518,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "QUAGLIA, Marino",
@@ -453,7 +527,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 28,000.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "RODRIGUEZ, Nawel",
@@ -461,7 +536,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "SCALTRITTI, Bianca",
@@ -469,7 +545,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "SEGURA Genaro",
@@ -477,7 +554,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "URTIAGA, Francisco gaspar",
@@ -485,7 +563,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "CAMINANTES"
+        "Rama": "CAMINANTES",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "ZURCHSMITTEN, Santiago",
@@ -493,6 +572,7 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 28,000.00",
+        "Agosto": "$ 28,000.00",
         "Rama": "CAMINANTES"
     },
     {
@@ -501,7 +581,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Bussoli, Maitena",
@@ -509,7 +590,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Contreras, Alma Martina",
@@ -517,7 +599,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "CONTRERAS, Morena",
@@ -525,7 +608,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Fisogni, Esteban Alejandro",
@@ -533,6 +617,7 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
+        "Agosto": "$ 28,000.00",
         "Rama": "ROVERS"
     },
     {
@@ -541,7 +626,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Lazarte Castro, Micaela Agostina",
@@ -549,7 +635,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Lunati, Sabrina Natalí",
@@ -557,7 +644,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Mansilla, Gonzalo Ezequiel",
@@ -565,6 +653,7 @@
         "Mayo": "$ 23,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
+        "Agosto": "$ 23,000.00",
         "Rama": "ROVERS"
     },
     {
@@ -573,6 +662,7 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
+        "Agosto": "$ 23,000.00",
         "Rama": "ROVERS"
     },
     {
@@ -581,7 +671,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 28,000.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "OLMEDO, Ivalu",
@@ -589,7 +680,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Peirano, Lautaro",
@@ -597,7 +689,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Pereyra, Hernán",
@@ -605,7 +698,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Romero, Gonzalo  Agustín",
@@ -613,7 +707,8 @@
         "Mayo": "$ 28,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Torreblanca, Lara Natalí",
@@ -621,7 +716,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Uncal Meyer, Lautaro",
@@ -629,7 +725,8 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Urtiaga, Abril",
@@ -637,7 +734,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Urtiaga, Tomás",
@@ -645,7 +743,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "VALDIVIEZO BERNARDI, Emma",
@@ -653,7 +752,8 @@
         "Mayo": "$ 21,000.00",
         "Junio": "$ 21,000.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     },
     {
         "Nombre": "Vidal, Vittorio Máximo",
@@ -661,6 +761,7 @@
         "Mayo": "$ 0.00",
         "Junio": "$ 0.00",
         "Julio": "$ 0.00",
-        "Rama": "ROVERS"
+        "Rama": "ROVERS",
+        "Agosto": "$ 0.00"
     }
 ]

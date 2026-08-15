@@ -92,6 +92,106 @@ const afiliados = {
     "56763170": { "nombre": "VAIRA, Genaro", "dni": "56763170", "ingreso": "2026-04-01", "cuotasPagas": ["2026-04", "2026-05", "2026-06", "2026-07"] }
 };
 
+// Datos suministrados por el usuario (resumen + afiliados con cuotas abr-26..sep-26)
+const datosExternos = {
+    "resumen": {
+        "total_afiliados": 88,
+        "total_pagado": 8718800,
+        "fecha_extraccion": "2026-08-10",
+        "periodo": "Abril - Septiembre 2026"
+    },
+    "afiliados": [
+        { "nombre": "ALDAY, Zoe", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 106000 },
+        { "nombre": "ALFONSO, Bianca", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 144000 },
+        { "nombre": "ANTONELLO, Lara", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "ARGUELLO, Luisana", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "Arguello, Ramiro Benjamín", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "BORDA, Aurora", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 172000 },
+        { "nombre": "BRANE IRAZBAL, Catalina", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 20000, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 80000 },
+        { "nombre": "BRUNO, Camilo", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 17000, "jul-26": 23000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 136000 },
+        { "nombre": "Basualdo, Lautaro", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "Bussoli, Maitena", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 172000 },
+        { "nombre": "CONTRERAS, Morena", "grupo": "Rovers", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "CORDOBA, Guillermina", "grupo": "Unidad", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "CORDOBA, Martina", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 88000 },
+        { "nombre": "CORREA Alma", "grupo": "Unidad", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "CORREA Matheo", "grupo": "Manada", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "Contreras, Alma Martina", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "DE LA O'PRADOZ MARTOS, Joaquin", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 190000 },
+        { "nombre": "DIAZ GUZMAN, Jeremias", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 23000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 142000 },
+        { "nombre": "DVORKIN, Julian", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 157000 },
+        { "nombre": "DVORKIN, Zoe", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 157000 },
+        { "nombre": "FLEITA, Pilar", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 144000 },
+        { "nombre": "FLORES CEBOLLADA, Juliana Milena", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "Fisogni, Esteban Alejandro", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 190000 },
+        { "nombre": "GALVAN, Bianca", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 28000, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 116000 },
+        { "nombre": "GOMEZ PELLIZA, Malena", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 106000 },
+        { "nombre": "GOMEZ, Francesca", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 88000 },
+        { "nombre": "GUERRICO, Pedro", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 144000 },
+        { "nombre": "GUIGNARD, Lucia", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "GUIÑAZU, Malena", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "GUIÑAZÚ, Patricio Joaquin", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "GUZMAN, Facundo", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 116000 },
+        { "nombre": "GUZMAN, Joaquin", "grupo": "Caminantes", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 116000 },
+        { "nombre": "HAUMAN LEIVA, Lisandro Hazziel", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 21000, "jun-26": 21000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 102000 },
+        { "nombre": "HAUMAN LEIVA, Regino", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 21000, "jun-26": 21000, "jul-26": 3000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 105000 },
+        { "nombre": "HEREDIA, Ambar", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "HEREDIA, India", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "HIDALGO, Benicio", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 144000 },
+        { "nombre": "JORNET LAVAYEN, Bautista", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 4000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 82000 },
+        { "nombre": "KORIAKOS, Jeremias", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "KORIAKOS, Taiana", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "LEIVA Nayeli Luana", "grupo": "Caminantes", "afiliacion": 60000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 123000 },
+        { "nombre": "LESCANO, Natanael", "grupo": "Caminantes", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "LUDUEÑA FASSI, Aldana", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 20900, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 116900 },
+        { "nombre": "LUDUEÑA, Malena", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 20900, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 116900 },
+        { "nombre": "Lazarte Castro, Micaela Agostina", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "Lunati, Sabrina Natalí", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 60000 },
+        { "nombre": "MALDONA MIRANDEI Alexander", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 88000 },
+        { "nombre": "MALICHO, Santino Tomas", "grupo": "Caminantes", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 116000 },
+        { "nombre": "MONITTO, Tobias", "grupo": "Unidad", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "MORETTO, Leon", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 144000 },
+        { "nombre": "Mansilla, Gonzalo Ezequiel", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 23000, "ago-26": 23000, "sep-26": 0 }, "total_pagado": 175000 },
+        { "nombre": "Mansilla, Valentina Abril", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 23000, "ago-26": 23000, "sep-26": 0 }, "total_pagado": 175000 },
+        { "nombre": "NAVARRETE, Alba", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 190000 },
+        { "nombre": "Nuñez, Bárbara", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 106000 },
+        { "nombre": "OLMEDO, Ivalu", "grupo": "Rovers", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "PARASKEVOPULOS, Agustin", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 106000 },
+        { "nombre": "PEREYRA, Victoria", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 23000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 152000 },
+        { "nombre": "Peinado, Octavio Valentín", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "Peirano, Lautaro", "grupo": "Rovers", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "Pereyra, Hernán", "grupo": "Rovers", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "Pereyra, Sofía", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 23000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 152000 },
+        { "nombre": "QUAGLIA, Marino", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "RECHE, Isabella", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 172000 },
+        { "nombre": "RODRIGUEZ, Nawel", "grupo": "Caminantes", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "ROMERO, Gael Bautista", "grupo": "Manada", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "ROMERO, Noah Benjamin", "grupo": "Unidad", "afiliacion": 0, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 0 },
+        { "nombre": "Romero, Gonzalo  Agustín", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 116000 },
+        { "nombre": "SCALTRITTI, Bianca", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 78000 },
+        { "nombre": "SCARFO, Nazareno", "grupo": "Manada", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 28000, "jun-26": 28000, "jul-26": 14000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 130000 },
+        { "nombre": "SEGURA Genaro", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 78000 },
+        { "nombre": "SEQUEIRA, Lionel", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 0, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "TISSERA Nicole", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 88000 },
+        { "nombre": "Torreblanca, Lara Natalí", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 78000 },
+        { "nombre": "URTIAGA, Francisco gaspar", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "URTIAGA, Julian", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 21000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "Uncal Meyer, Lautaro", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 50000 },
+        { "nombre": "Urtiaga, Abril", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 21000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "Urtiaga, Joaquín", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 21000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "Urtiaga, Juan", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 21000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "Urtiaga, Pedro Valentin", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 23000, "may-26": 23000, "jun-26": 23000, "jul-26": 23000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 142000 },
+        { "nombre": "Urtiaga, Tomás", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 21000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 134000 },
+        { "nombre": "VAIRA, Genaro", "grupo": "Manada", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 0, "sep-26": 0 }, "total_pagado": 162000 },
+        { "nombre": "VALDIVIEZO BERNARDI, Emma", "grupo": "Rovers", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 113000 },
+        { "nombre": "Valdiviezo Berardi, Noah", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 113000 },
+        { "nombre": "Valdiviezo Bernardi, Liz", "grupo": "Unidad", "afiliacion": 50000, "cuotas": { "abr-26": 21000, "may-26": 21000, "jun-26": 21000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 113000 },
+        { "nombre": "Vidal, Vittorio Máximo", "grupo": "Rovers", "afiliacion": 60000, "cuotas": { "abr-26": 0, "may-26": 0, "jun-26": 0, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 60000 },
+        { "nombre": "Vitale Masso, Martina", "grupo": "Unidad", "afiliacion": 60000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 0, "ago-26": 0, "sep-26": 0 }, "total_pagado": 144000 },
+        { "nombre": "ZURCHSMITTEN, Santiago", "grupo": "Caminantes", "afiliacion": 50000, "cuotas": { "abr-26": 28000, "may-26": 28000, "jun-26": 28000, "jul-26": 28000, "ago-26": 28000, "sep-26": 0 }, "total_pagado": 190000 }
+    ]
+};
+
 // ==========================================
 // 2. CAPTURA DE ELEMENTOS Y EVENTOS
 // ==========================================
@@ -152,6 +252,26 @@ function buscarRegistroPorNombre(nombreAfiliado) {
 
 async function cargarCuotasJson() {
     try {
+        // Si hay datos proporcionados localmente, convertirlos al formato esperado
+        if (typeof datosExternos !== 'undefined' && Array.isArray(datosExternos.afiliados)) {
+            cuotasAbrJulioData = datosExternos.afiliados.map(item => {
+                return {
+                    Nombre: item.nombre,
+                    Abril: (item.cuotas && item.cuotas['abr-26']) ? String(item.cuotas['abr-26']) : '0',
+                    Mayo: (item.cuotas && item.cuotas['may-26']) ? String(item.cuotas['may-26']) : '0',
+                    Junio: (item.cuotas && item.cuotas['jun-26']) ? String(item.cuotas['jun-26']) : '0',
+                    Julio: (item.cuotas && item.cuotas['jul-26']) ? String(item.cuotas['jul-26']) : '0',
+                    Agosto: (item.cuotas && item.cuotas['ago-26']) ? String(item.cuotas['ago-26']) : '0',
+                    Septiembre: (item.cuotas && item.cuotas['sep-26']) ? String(item.cuotas['sep-26']) : '0'
+                };
+            });
+            cuotasPorNombre = new Map(
+                cuotasAbrJulioData.map(item => [normalizarNombre(item.Nombre), item])
+            );
+            return;
+        }
+
+        // Fallback: cargar desde archivo JSON remoto/local
         const respuesta = await fetch('cuotas_abril_julio.json');
         if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
 
@@ -160,7 +280,7 @@ async function cargarCuotasJson() {
             cuotasAbrJulioData.map(item => [normalizarNombre(item.Nombre), item])
         );
     } catch (error) {
-        console.error('No se pudo cargar cuotas_abril_julio.json:', error);
+        console.error('No se pudo cargar cuotas_abril_julio.json ni usar datosExternos:', error);
     }
 }
 
@@ -195,6 +315,9 @@ function buscarAfiliado(dni) {
     }
     if (!afiliado) return null;
 
+    // Asegurar que siempre exista el arreglo de cuotas pagas en el objeto afiliado
+    afiliado.cuotasPagas = afiliado.cuotasPagas || [];
+
     let registroJson = cuotasPorNombre.get(normalizarNombre(afiliado.nombre));
     if (!registroJson) {
         registroJson = buscarRegistroPorNombre(afiliado.nombre);
@@ -212,7 +335,7 @@ function parseImporteJson(valor) {
 function determinarCuotaBase(registroJson) {
     if (!registroJson) return CUOTA_BASE_DEFAULT;
 
-    const pagos = ['Abril', 'Mayo', 'Junio', 'Julio']
+    const pagos = ['Abril', 'Mayo', 'Junio', 'Julio', 'Agosto']
         .map(mes => parseImporteJson(registroJson[mes]))
         .filter(valor => valor > 0);
 
@@ -231,25 +354,59 @@ function calcularCuotas(afiliado) {
         { codigoPeriodo: '2026-04', mesTexto: 'Abril 2026', key: 'Abril' },
         { codigoPeriodo: '2026-05', mesTexto: 'Mayo 2026', key: 'Mayo' },
         { codigoPeriodo: '2026-06', mesTexto: 'Junio 2026', key: 'Junio' },
-        { codigoPeriodo: '2026-07', mesTexto: 'Julio 2026', key: 'Julio' }
+        { codigoPeriodo: '2026-07', mesTexto: 'Julio 2026', key: 'Julio' },
+        { codigoPeriodo: '2026-08', mesTexto: 'Agosto 2026', key: 'Agosto' },
+        { codigoPeriodo: '2026-09', mesTexto: 'Septiembre 2026', key: 'Septiembre' }
     ];
 
     const registroJson = afiliado.cuotasAbrJulio;
     const cuotaBase = determinarCuotaBase(registroJson);
     const listadoCuotas = [];
 
-    const pagos = periodosFijos.map(periodo =>
-        registroJson ? parseImporteJson(registroJson[periodo.key]) : 0
-    );
-    const primerPagoIndex = pagos.findIndex(valor => valor > 0);
+    // Determinar índice de ingreso dentro de los periodos para marcar meses anteriores como "no aplica"
+    let ingresoIndex = 0;
+    if (afiliado.ingreso) {
+        const ingresoPeriodo = afiliado.ingreso.slice(0, 7); // 'YYYY-MM'
+        ingresoIndex = periodosFijos.findIndex(p => p.codigoPeriodo === ingresoPeriodo);
+        if (ingresoIndex === -1) {
+            const ingresoDate = new Date(afiliado.ingreso);
+            const firstDate = new Date(periodosFijos[0].codigoPeriodo + '-01');
+            const lastDate = new Date(periodosFijos[periodosFijos.length - 1].codigoPeriodo + '-01');
+            if (ingresoDate <= firstDate) {
+                ingresoIndex = 0;
+            } else if (ingresoDate > lastDate) {
+                ingresoIndex = periodosFijos.length;
+            } else {
+                ingresoIndex = periodosFijos.findIndex(p => new Date(p.codigoPeriodo + '-01') >= ingresoDate);
+            }
+        }
+    }
+
+    const pagos = periodosFijos.map((periodo, idx) => {
+        // No computar pagos para meses anteriores al ingreso
+        if (idx < ingresoIndex) return 0;
+        const importeRegistrado = registroJson ? parseImporteJson(registroJson[periodo.key]) : 0;
+        if ((importeRegistrado === 0 || isNaN(importeRegistrado)) && Array.isArray(afiliado.cuotasPagas) && afiliado.cuotasPagas.includes(periodo.codigoPeriodo)) {
+            return cuotaBase;
+        }
+        return importeRegistrado;
+    });
+
+    const pagosConsecutivos = [...pagos];
+    for (let i = pagosConsecutivos.length - 1; i > 0; i--) {
+        if (pagosConsecutivos[i] > 0 && pagosConsecutivos[i - 1] === 0 && (i - 1) >= ingresoIndex) {
+            pagosConsecutivos[i - 1] = cuotaBase;
+        }
+    }
 
     periodosFijos.forEach((periodo, index) => {
-        const importePagado = registroJson
-            ? parseImporteJson(registroJson[periodo.key])
-            : 0;
-        const esMesAnteriorAlIngreso = importePagado === 0 && primerPagoIndex !== -1 && index < primerPagoIndex;
-        const importeAdeudado = esMesAnteriorAlIngreso ? 0 : Math.max(0, cuotaBase - importePagado);
-        const estaPagado = !esMesAnteriorAlIngreso && importePagado > 0 && importeAdeudado === 0;
+        const importePagado = (index < ingresoIndex)
+            ? 0
+            : (registroJson ? parseImporteJson(registroJson[periodo.key]) : (Array.isArray(afiliado.cuotasPagas) && afiliado.cuotasPagas.includes(periodo.codigoPeriodo) ? cuotaBase : 0));
+        const importePagadoEfectivo = pagosConsecutivos[index] || 0;
+        const esMesAnteriorAlIngreso = index < ingresoIndex;
+        const importeAdeudado = esMesAnteriorAlIngreso ? 0 : Math.max(0, cuotaBase - importePagadoEfectivo);
+        const estaPagado = !esMesAnteriorAlIngreso && importePagadoEfectivo >= cuotaBase && importeAdeudado === 0;
         const importePagadoVisual = esMesAnteriorAlIngreso ? 0 : estaPagado ? cuotaBase : importePagado;
 
         listadoCuotas.push({
@@ -269,10 +426,12 @@ function calcularCuotas(afiliado) {
 }
 
 function mostrarResumen(afiliado, listadoCuotas) {
-    const totalCuotas = listadoCuotas.length;
-    const cuotasPagas = listadoCuotas.filter(item => item.pagado).length;
-    const cuotasPendientes = listadoCuotas.filter(item => item.importeAdeudado > 0).length;
-    const totalAdeudado = listadoCuotas.reduce((sum, item) => sum + item.importeAdeudado, 0);
+    // Excluir meses marcados como noAplica de los totales
+    const cuotasAplicables = listadoCuotas.filter(item => !item.noAplica);
+    const totalCuotas = cuotasAplicables.length;
+    const cuotasPagas = cuotasAplicables.filter(item => item.pagado).length;
+    const cuotasPendientes = cuotasAplicables.filter(item => item.importeAdeudado > 0).length;
+    const totalAdeudado = cuotasAplicables.reduce((sum, item) => sum + item.importeAdeudado, 0);
 
     document.getElementById('lblNombre').textContent = afiliado.nombre;
     document.getElementById('lblDni').textContent = afiliado.dni;
@@ -288,6 +447,29 @@ function mostrarResumen(afiliado, listadoCuotas) {
     const boxTotalAdeudado = document.getElementById('boxTotalAdeudado');
     const participationNotice = document.getElementById('participationNotice');
 
+    // Determinar si puede participar con tolerancia de X meses (por defecto 1)
+    function puedeParticiparConTolerancia(listadoCuotas, toleranciaMeses = 1) {
+        if (!Array.isArray(listadoCuotas) || listadoCuotas.length === 0) return false;
+        const hoy = new Date();
+        const year = hoy.getFullYear();
+        const month = String(hoy.getMonth() + 1).padStart(2, '0');
+        const codigoActual = `${year}-${month}`;
+
+        let indiceActual = listadoCuotas.findIndex(item => item.codigoPeriodo === codigoActual);
+        if (indiceActual === -1) {
+            // Si el periodo actual no está en la lista, usar el último periodo conocido
+            indiceActual = listadoCuotas.length - 1;
+        }
+
+        let ultimoPagoIndex = -1;
+        listadoCuotas.forEach((item, idx) => {
+            if (item.pagado) ultimoPagoIndex = idx;
+        });
+
+        return ultimoPagoIndex >= (indiceActual - toleranciaMeses);
+    }
+
+    const puedeParticipar = puedeParticiparConTolerancia(listadoCuotas, 1);
     if (badgeEstado && boxTotalAdeudado) {
         if (totalAdeudado > 0) {
             badgeEstado.className = "status-pill debt";
@@ -295,8 +477,14 @@ function mostrarResumen(afiliado, listadoCuotas) {
             boxTotalAdeudado.className = "metric-box metric-highlight debt";
             if (participationNotice) {
                 participationNotice.style.display = 'block';
-                participationNotice.className = 'participation-note debt';
-                participationNotice.innerHTML = `<strong>Salida 11/07 al Camping San Martín:</strong> Por favor regularice su deuda para poder participar.`;
+                // Permitir participación si cumple la tolerancia aun con deuda
+                if (puedeParticipar) {
+                    participationNotice.className = 'participation-note clear';
+                    participationNotice.innerHTML = `<strong>Eventos fuera del grupo:</strong> Podrá participar (recuerde ponerse al día).`;
+                } else {
+                    participationNotice.className = 'participation-note debt';
+                    participationNotice.innerHTML = `<strong>Eventos fuera del grupo:</strong> No podrá participar, regularice su deuda.`;
+                }
             }
         } else {
             badgeEstado.className = "status-pill clean";
@@ -305,7 +493,7 @@ function mostrarResumen(afiliado, listadoCuotas) {
             if (participationNotice) {
                 participationNotice.style.display = 'block';
                 participationNotice.className = 'participation-note clear';
-                participationNotice.innerHTML = `<strong>Salida 11/07 al Campign San Martín:</strong> El protgaonista puede participar. Mantenga sus cuotas al día.`;
+                participationNotice.innerHTML = `<strong>Eventos fuera del grupo:</strong> Podrá participar.`;
             }
         }
     }
