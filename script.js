@@ -532,7 +532,7 @@ function mostrarResumen(afiliado, listadoCuotas) {
     if (badgeEstado && boxTotalAdeudado) {
         if (totalAdeudado > 0) {
             badgeEstado.className = "status-pill debt";
-            badgeEstado.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ⚠️ DEBE PLATA`;
+            badgeEstado.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ACTUALIZADO AL 15/08`;
             boxTotalAdeudado.className = "metric-box metric-highlight debt";
             if (participationNotice) {
                 participationNotice.style.display = 'block';
