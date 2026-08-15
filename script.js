@@ -520,16 +520,16 @@ function mostrarResumen(afiliado, listadoCuotas) {
     if (badgeEstado && boxTotalAdeudado) {
         if (totalAdeudado > 0) {
             badgeEstado.className = "status-pill debt";
-            badgeEstado.innerHTML = `<i class="bi bi-x-circle-fill"></i> Posee deuda`;
+            badgeEstado.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ⚠️ DEBE PLATA`;
             boxTotalAdeudado.className = "metric-box metric-highlight debt";
             if (participationNotice) {
                 participationNotice.style.display = 'block';
                 if (puedeParticipar) {
                     participationNotice.className = 'participation-note clear';
-                    participationNotice.innerHTML = `<strong>Eventos fuera del grupo:</strong> Podrá participar (recuerde ponerse al día).`;
+                    participationNotice.innerHTML = `<strong>⚠️ DEUDA REGISTRADA:</strong> Debe ${formatearPesos(totalAdeudado)} en ${cuotasPendientes} cuota(s). Podrá participar con tolerancia, pero debe regularizar.`;
                 } else {
                     participationNotice.className = 'participation-note debt';
-                    participationNotice.innerHTML = `<strong>Eventos fuera del grupo:</strong> No podrá participar, regularice su deuda.`;
+                    participationNotice.innerHTML = `<strong>❌ DEUDA IMPORTANTE:</strong> Debe ${formatearPesos(totalAdeudado)} en ${cuotasPendientes} cuota(s). No podrá participar hasta regularizar.`;
                 }
             }
         } else {
