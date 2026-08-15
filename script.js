@@ -379,9 +379,21 @@ function parseImporteJson(valor) {
 function determinarCuotaBase(registroJson) {
     if (!registroJson) return CUOTA_BASE_DEFAULT;
 
-    const pagos = ['Abril', 'Mayo', 'Junio', 'Julio', 'Agosto']
-        .map(mes => parseImporteJson(registroJson[mes]))
-        .filter(valor => valor > 0);
+    // Primero, buscar si hay ALGÚN pago de 21000 o 23000 (indica que es hermano)
+    const todosLosPagos = ['Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre']
+        .map(mes => parseImporteJson(registroJson[mes]));
+    
+    // Si encuentra 23.000 en cualquier mes, es hermano con esa tarifa
+    if (todosLosPagos.includes(23000)) {
+        return 23000;
+    }
+    
+    // Si encuentra 21.000 en cualquier mes, es hermano con esa tarifa
+    if (todosLosPagos.includes(21000)) {
+        return 21000;
+    }
+
+    const pagos = todosLosPagos.filter(valor => valor > 0);
 
     if (pagos.length === 0) {
         return CUOTA_BASE_DEFAULT;
