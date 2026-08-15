@@ -552,11 +552,15 @@
             font-weight: 600;
         }
 
+        .maintenance-banner {
+            display: none !important;
+        }
+
         .search-card,
         #errorCard,
         .dashboard-layout,
         .table-card {
-            display: none !important;
+            display: block;
         }
 
         @media (max-width: 860px) {
@@ -623,6 +627,11 @@
                     </div>
                 </div>
                 <div class="hero-divider" aria-hidden="true"></div>
+
+                <div class="validation-banner" style="display:flex; align-items:center; gap:0.7rem; background:#fff7ed; border:1px solid rgba(251,146,60,0.35); color:#9a4b00; border-radius:12px; padding:0.8rem 1rem; margin:0 0 1rem; font-size:0.9rem; font-weight:700;">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <span>Recuerde validar la información con jefatura. Este sistema puede contener errores.</span>
+                </div>
 
                 <div class="search-form">
                     <div class="search-wrapper">

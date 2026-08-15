@@ -271,16 +271,41 @@ async function cargarCuotasJson() {
             return;
         }
 
-        // Fallback: cargar desde archivo JSON remoto/local
-        const respuesta = await fetch('cuotas_abril_julio.json');
-        if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
+        const archivos = ['cuotas.json', 'cuotas_abril_julio.json'];
+        let datosCargados = null;
 
-        cuotasAbrJulioData = await respuesta.json();
+        for (const archivo of archivos) {
+            try {
+                const respuesta = await fetch(archivo);
+                if (!respuesta.ok) continue;
+                datosCargados = await respuesta.json();
+                break;
+            } catch (error) {
+                continue;
+            }
+        }
+
+        if (!datosCargados) {
+            throw new Error('No se encontró un JSON válido de cuotas');
+        }
+
+        cuotasAbrJulioData = datosCargados.map(item => {
+            return {
+                Nombre: item.Nombre || item.nombre || '',
+                Abril: item.Abril ?? item['abr-26'] ?? '0',
+                Mayo: item.Mayo ?? item['may-26'] ?? '0',
+                Junio: item.Junio ?? item['jun-26'] ?? '0',
+                Julio: item.Julio ?? item['jul-26'] ?? '0',
+                Agosto: item.Agosto ?? item['ago-26'] ?? '0',
+                Septiembre: item.Septiembre ?? item['sep-26'] ?? '0'
+            };
+        });
+
         cuotasPorNombre = new Map(
             cuotasAbrJulioData.map(item => [normalizarNombre(item.Nombre), item])
         );
     } catch (error) {
-        console.error('No se pudo cargar cuotas_abril_julio.json ni usar datosExternos:', error);
+        console.error('No se pudo cargar ningún JSON de cuotas:', error);
     }
 }
 
@@ -327,9 +352,28 @@ function buscarAfiliado(dni) {
 }
 
 function parseImporteJson(valor) {
-    if (typeof valor !== 'string') return 0;
-    const numeric = valor.replace(/[^0-9.,-]/g, '').replace(/,/g, '');
-    return parseFloat(numeric) || 0;
+    if (valor === null || valor === undefined || valor === '') return 0;
+
+    const texto = String(valor).trim();
+    if (!texto || texto === 'null' || texto === 'undefined' || texto.startsWith('=')) return 0;
+
+    let limpio = texto.replace(/[$\s]/g, '');
+
+    if (limpio.includes(',') && limpio.includes('.')) {
+        limpio = limpio.replace(/\./g, '').replace(',', '.');
+    } else if (limpio.includes(',') && !limpio.includes('.')) {
+        limpio = limpio.replace(',', '.');
+    } else if (limpio.includes('.') && limpio.split('.').length > 2) {
+        const partes = limpio.split('.');
+        const ultimo = partes.pop();
+        limpio = partes.join('') + '.' + ultimo;
+    }
+
+    const numeric = limpio.replace(/[^0-9.\-]/g, '');
+    if (!numeric || numeric === '-' || numeric === '.' || numeric === '-.') return 0;
+
+    const numero = Number.parseFloat(numeric);
+    return Number.isFinite(numero) ? numero : 0;
 }
 
 function determinarCuotaBase(registroJson) {
@@ -359,6 +403,8 @@ function calcularCuotas(afiliado) {
         { codigoPeriodo: '2026-09', mesTexto: 'Septiembre 2026', key: 'Septiembre' }
     ];
 
+    const hoy = new Date();
+    const codigoPeriodoActual = `${hoy.getFullYear()}-${String(hoy.getMonth() + 1).padStart(2, '0')}`;
     const registroJson = afiliado.cuotasAbrJulio;
     const cuotaBase = determinarCuotaBase(registroJson);
     const listadoCuotas = [];
@@ -405,9 +451,10 @@ function calcularCuotas(afiliado) {
             : (registroJson ? parseImporteJson(registroJson[periodo.key]) : (Array.isArray(afiliado.cuotasPagas) && afiliado.cuotasPagas.includes(periodo.codigoPeriodo) ? cuotaBase : 0));
         const importePagadoEfectivo = pagosConsecutivos[index] || 0;
         const esMesAnteriorAlIngreso = index < ingresoIndex;
-        const importeAdeudado = esMesAnteriorAlIngreso ? 0 : Math.max(0, cuotaBase - importePagadoEfectivo);
-        const estaPagado = !esMesAnteriorAlIngreso && importePagadoEfectivo >= cuotaBase && importeAdeudado === 0;
-        const importePagadoVisual = esMesAnteriorAlIngreso ? 0 : estaPagado ? cuotaBase : importePagado;
+        const esMesPosteriorAlActual = periodo.codigoPeriodo > codigoPeriodoActual;
+        const importeAdeudado = (esMesAnteriorAlIngreso || esMesPosteriorAlActual) ? 0 : Math.max(0, cuotaBase - importePagadoEfectivo);
+        const estaPagado = !esMesAnteriorAlIngreso && !esMesPosteriorAlActual && importePagadoEfectivo >= cuotaBase && importeAdeudado === 0;
+        const importePagadoVisual = (esMesAnteriorAlIngreso || esMesPosteriorAlActual) ? 0 : (estaPagado ? cuotaBase : importePagado);
 
         listadoCuotas.push({
             codigoPeriodo: periodo.codigoPeriodo,
@@ -416,8 +463,8 @@ function calcularCuotas(afiliado) {
             importePagadoVisual,
             importeAdeudado,
             pagado: estaPagado,
-            pagoParcial: !esMesAnteriorAlIngreso && importePagado > 0 && !estaPagado,
-            noAplica: esMesAnteriorAlIngreso
+            pagoParcial: !esMesAnteriorAlIngreso && !esMesPosteriorAlActual && importePagado > 0 && !estaPagado,
+            noAplica: esMesAnteriorAlIngreso || esMesPosteriorAlActual
         });
     });
 
@@ -477,7 +524,6 @@ function mostrarResumen(afiliado, listadoCuotas) {
             boxTotalAdeudado.className = "metric-box metric-highlight debt";
             if (participationNotice) {
                 participationNotice.style.display = 'block';
-                // Permitir participación si cumple la tolerancia aun con deuda
                 if (puedeParticipar) {
                     participationNotice.className = 'participation-note clear';
                     participationNotice.innerHTML = `<strong>Eventos fuera del grupo:</strong> Podrá participar (recuerde ponerse al día).`;
@@ -488,7 +534,7 @@ function mostrarResumen(afiliado, listadoCuotas) {
             }
         } else {
             badgeEstado.className = "status-pill clean";
-            badgeEstado.innerHTML = `<i class="bi bi-check-circle-fill"></i> Sin deuda`;
+            badgeEstado.innerHTML = `<i class="bi bi-check-circle-fill"></i> Al día`;
             boxTotalAdeudado.className = "metric-box metric-highlight";
             if (participationNotice) {
                 participationNotice.style.display = 'block';
